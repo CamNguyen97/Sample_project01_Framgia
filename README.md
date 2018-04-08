@@ -23,3 +23,4 @@ Things you may want to cover:
 
 * ...
 # Template_ROR_Framgia
+# Sample_project01_Framgia
