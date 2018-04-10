@@ -1,0 +1,44 @@
+<div class="header">
+  <div class="header-top">
+    <div class="wrap">
+      <div class="banner-no">
+        <%= link_to image_tag("banner-no.png", alt: ""), "" %>
+      </div>
+      <div class="nav-wrap">
+        <ul class="group" id="example-one">
+          <li class="current_page_item"><%= link_to t(".home"), "#" %></li>
+          <li><%= link_to t(".about"), "#" %></li>
+          <li><%= link_to t(".movies_event"), "#" %></li>
+          <li><%= link_to t(".contact"), "#" %></li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="wrap">
+      <div class="h-logo">
+        <%= link_to "#" do %>
+          <%= link_to image_tag("logo.png", alt: ""), "" %>
+        <% end %>
+      </div>
+      <div id="reservation-form">
+        <fieldset>
+          <div class="field">
+            <%= label_tag t "page_home.home._header.find_movie" %>
+            <%= select_tag "colors",
+              "<option>#{t "search"}</option>".html_safe,
+              class:"select2",multiple: false %>
+          </div>
+          <div class="field1">
+            <%= label_tag t "search" %>
+            <%= select_tag "colors",
+              "<option>#{t "search"}</option>".html_safe,
+              class:"select2",multiple: false %>
+          </div>
+        </fieldset>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
