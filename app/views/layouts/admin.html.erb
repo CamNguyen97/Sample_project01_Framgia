@@ -9,12 +9,13 @@
       "data-turbolinks-track": "reload" %>
   </head>
 
-  <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <body>
+   <div id="wrapper">
     <%= render "page_admin/home/header" %>
-    <div class="content-wrapper">
-      <div class="container-fluid">
-        <%= yield %>
-      </div>
+    <div id="page-wrapper">
+      <%= yield %>
     </div>
+  </div>
+  <%= javascript_include_tag "table" %>
   </body>
 </html>

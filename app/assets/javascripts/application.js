@@ -1,9 +1,10 @@
-//= require jquery3
-//= require jquery_ujs
+//= require jquery.min
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
 //= require modernizr
-//= require jquery.min
-//= require example
+//= require bootstrap.min
+//= require jquery.dataTables.min
+//= require dataTables.bootstrap.min
+//= require dataTables.responsive
 //= require jquery.flexslider
