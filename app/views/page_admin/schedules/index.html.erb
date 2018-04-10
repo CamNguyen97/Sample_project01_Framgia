@@ -1,0 +1,33 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <%= link_to t("dashboard") %>
+  </li>
+  <li class="breadcrumb-item active"><%= t ".shedule" %></li>
+</ol>
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <%= render "headerTable" %>
+        </thead>
+        <tbody>
+          <% @schedules.each_with_index do |item, index| %>
+          <tr>
+            <td><%= index+1 %></td>
+            <td><%= item.show_case %></td>
+            <td><%= item.start_time %></td>
+            <td><%= item.end_time %></td>
+            <td><%= item.date_movie %></td>
+            <td><%= item.created_at %></td>
+            <td><%= item.updated_at %></td>
+            <td></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+

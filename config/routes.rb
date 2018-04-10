@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "/contact", to: "page_home/contact#index"
   get "/event", to: "page_home/event#index"
   get "/booking", to: "booking_ticket#index"
+  get "/admin/schedules", to: "page_admin/schedules#index"
   root "page_home/home#index"
 
   namespace :page_home do
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
 
   namespace :page_admin do
     resources :home
+    resources :user
+    resources :schedules
   end
 
   namespace :login do
