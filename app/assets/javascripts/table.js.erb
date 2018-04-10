@@ -1,0 +1,13 @@
+$('#dataTable').DataTable({
+  responsive: true
+});
+$(".btn-ticket").click(function() {
+  window.location.href = "/page_admin/tickets/new";
+});
+$(".btn-users").click(function() {
+  window.location.href = "#";
+});
+$(".btn-ticket-update").click(function() {
+  data = $(this).attr("data")
+    window.location.href = "/page_admin/tickets/" + data + "/edit";
+});
