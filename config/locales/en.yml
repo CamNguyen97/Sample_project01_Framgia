@@ -1,5 +1,6 @@
 en:
   email_contact: "Email"
+  save_chane: "Save chane"
   mobile: "Mobile no"
   subject: "Subject"
   number_s: "A"
@@ -38,6 +39,9 @@ en:
   more_movie: "More Movies"
   most_premieres: "Most Premieres"
   last_new: "Latest News"
+  user_profile: "User Profile"
+  setting: "Settings"
+  loguot: "Logout"
   layout:
     admin:
       title_admin: "Home Page Admin"
@@ -76,3 +80,24 @@ en:
           find_movie: "Find a Movie:"
           movie_list: "Movie list"
           movies_actor: "Movies or Actors"
+  model:
+    action: "Action"
+    disactive: "unactive"
+    stt: "STT"
+    users:
+      password: "Password"
+      actived: "Actived"
+      address: "Adress"
+      phone: "Phone"
+      email: "Email"
+      status: "Status"
+      role: "Role"
+      create_at: "Create at"
+      updated_at: "Update at"
+    movies:
+      name: "name"
+      product_year: "Product year"
+      broadcasing_time: "Broadcasing time"
+      descreption: "Descreption"
+      trailers: "Trailers"
+      studio: "Studio"
