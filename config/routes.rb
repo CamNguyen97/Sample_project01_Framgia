@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :page_admin do
+    resources :home
+  end
+  namespace :login do
+    resources :sessions_admin
+  end
 end
