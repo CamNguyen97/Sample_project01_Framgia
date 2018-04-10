@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem "bootstrap4-kaminari-views"
 gem "coffee-rails", "~> 4.2"
 gem "config"
 gem "font-awesome-rails"
@@ -16,6 +17,9 @@ gem "rails", "~> 5.1.5"
 gem "rubocop", require: false
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "jquery-datatables-rails", "~> 3.4.0"
+gem "kaminari", "~> 1.1", ">= 1.1.1"
+gem "fake", "~> 1.42", ">= 1.42.11.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
