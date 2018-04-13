@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20180410092228) do
     t.string "name"
     t.date "produce_year"
     t.integer "broadcasing_time"
-    t.text "descreption"
+    t.text "description"
     t.string "trailer"
     t.boolean "status"
     t.integer "studio_id"
@@ -80,10 +80,12 @@ ActiveRecord::Schema.define(version: 20180410092228) do
   end
 
   create_table "schedules_cinemarooms", force: :cascade do |t|
+    t.integer "schedule_id"
     t.integer "cinemaroom_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cinemaroom_id"], name: "index_schedules_cinemarooms_on_cinemaroom_id"
+    t.index ["schedule_id"], name: "index_schedules_cinemarooms_on_schedule_id"
   end
 
   create_table "seats", force: :cascade do |t|
@@ -126,7 +128,7 @@ ActiveRecord::Schema.define(version: 20180410092228) do
     t.datetime "activated_at"
     t.string "reset_digest"
     t.datetime "reset_sent_at"
-    t.string "adress"
+    t.string "address"
     t.integer "phone"
     t.string "email"
     t.boolean "status"

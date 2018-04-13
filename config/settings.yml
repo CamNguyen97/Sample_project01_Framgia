@@ -1,0 +1,12 @@
+booking_ticket:
+  seat: 1
+model:
+  movie:
+    num_movie_show: 5
+  users:
+    maximum_name: 50
+    maximum_email: 255
+    minimum_password: 6
+  cinemarooms:
+    maximum_num_row_seats: 50
+    maximum_num_of_seats: 50
