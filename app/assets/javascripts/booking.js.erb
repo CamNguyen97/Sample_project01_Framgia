@@ -5,7 +5,7 @@ function onLoaderFunc() {
 
 function takeData() {
   if (($('#Username').val().length == 0) || ($('#Numseats').val().length == 0)) {
-    alert('Please Enter your Name and Number of Seats');
+    alert t 'booking01';
   } else {
     $('.inputForm *').prop('disabled', true);
     $('.seatStructure *').prop('disabled', false);
@@ -29,7 +29,7 @@ function updateTextArea() {
     $('#NumberDisplay').val(allNumberVals);
     $('#seatsDisplay').val(allSeatsVals);
   } else {
-    alert('Please select ' + ($('#Numseats').val()) + ' seats')
+    alert t 'booking02' + ($('#Numseats').val())
   }
 }
 

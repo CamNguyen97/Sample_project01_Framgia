@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   get "/contact", to: "page_home/contact#index"
   get "/event", to: "page_home/event#index"
   get "/booking", to: "booking_ticket#index"
+  get "/signup", to: "page_admin/users#new"
+  post "/signup", to: "page_admin/users#create"
+  get "/login", to: "page_admin/sessions#new"
+  post "/login", to: "page_admin/sessions#create"
+  delete "/logout", to: "page_admin/sessions#destroy"
   root "page_home/home#index"
 
   namespace :page_home do
@@ -11,9 +16,10 @@ Rails.application.routes.draw do
 
   namespace :page_admin do
     resources :home
-  end
-
-  namespace :login do
-    resources :sessions_admin
+    resources :users
+    resources :account_activations, only: [:edit]
+    resources :sessions
+    resources :password_resets, only: [:new, :create, :edit, :update]
   end
 end
+ 

@@ -42,6 +42,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
     ast (2.4.0)
+    bcrypt (3.1.11)
     bindex (0.5.0)
     builder (3.2.3)
     byebug (10.0.2)
@@ -106,6 +107,8 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.0.0)
       concurrent-ruby (~> 1.0)
+    i18n-js (3.0.5)
+      i18n (>= 0.6.6, < 2)
     inflecto (0.0.2)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -231,12 +234,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.11)
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   config
   font-awesome-rails
   fuzzily
+  i18n-js
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
