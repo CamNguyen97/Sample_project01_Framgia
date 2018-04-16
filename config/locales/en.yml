@@ -1,12 +1,22 @@
 en:
+  wellcome: "Welcome to the My Website on the link below to activate your account:"
+  hi: "Hi!"
+  website: "-- Website --"
+  creat_account: "Create my account"
+  signup: "Sign up"
+  password: "Password"
+  password_confirmation: "Password confirmation"
   email_contact: "Email"
   mobile: "Mobile no"
   subject: "Subject"
   number_s: "A"
   movies_seat: "Movie Seat Selection"
   search: "Search"
-  name: "Name"
+  user_name: "User name"
+  name: "name"
   seat: "Seats"
+  number_phone: "Phone"
+  adress: "Adress"
   confirm_selection: "Confirm Selection"
   screen: "Screen this way"
   search_seat: "Start Selecting"
@@ -38,6 +48,28 @@ en:
   more_movie: "More Movies"
   most_premieres: "Most Premieres"
   last_new: "Latest News"
+  unvalid: "No Invalid"
+  unactived: "Account not activated. Check your email for the activation link."
+  check_infor: "Please check your email to activate your account."
+  no_users: "No User!"
+  mails_send: "noreply@example.com"
+  account_active: "Account activation"
+  mail_to: "to@example.org"
+  reset: "Reset password"
+  send_email: "Email sent with password reset instructions"
+  not_email: "Email address not found"
+  not_empty: "can't be empty"
+  reset_pass_success: "Password has been reset."
+  reset_pass_expired: "Password reset has expired."
+  account_actived: "Account activated!"
+  actived_link: "Invalid activation link"
+  update_pass: "Update password"
+  click_reset: "To reset your password click the link below:"
+  two_hour: "This link will expire in two hours."
+  content_reset_pass: "If you did not request your password to be reset, please ignore this email and
+    your password will stay as it is."
+  booking01: 'Please Enter your Name and Number of Seats'
+  booking02: 'Please select '
   layout:
     admin:
       title_admin: "Home Page Admin"
@@ -57,12 +89,10 @@ en:
         link: "Link"
       index:
         my_dashboard: "My Dashboard"
-  login:
-    sessions_admin:
-      index:
+    sessions:
+      new:
         login: "Login"
         email: "Email address"
-        password: "Password"
         remember_password: "Remember Password"
         register_account: " Register an Account"
         forgot_password: "Forgot Password?"

@@ -126,7 +126,7 @@ ActiveRecord::Schema.define(version: 20180410092228) do
     t.datetime "activated_at"
     t.string "reset_digest"
     t.datetime "reset_sent_at"
-    t.string "adress"
+    t.string "address"
     t.integer "phone"
     t.string "email"
     t.boolean "status"
