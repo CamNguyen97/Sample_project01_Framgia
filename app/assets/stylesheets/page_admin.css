@@ -1,4 +1,8 @@
 /*
- *= require bootstrap.min
- *= require sb-admin.min
- */
+ *= require bootstrap
+ *= require metisMenu.min
+ *= require dataTables.bootstrap
+ *= require dataTables.responsive
+ *= require sb-admin-2
+ *= require font-awesome
+*/

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   namespace :page_admin do
     resources :home
+    resources :user
+    resources :movietype
   end
 
   namespace :login do
