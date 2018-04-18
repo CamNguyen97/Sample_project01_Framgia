@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module AppTestGem
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.autoload_paths += %W(#{config.root}/lib)
     config.load_defaults 5.1
     config.assets.precompile += %w(page_admin)
     config.assets.precompile += %w(page_home)

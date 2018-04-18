@@ -16,6 +16,8 @@ gem "rails", "~> 5.1.5"
 gem "rubocop", require: false
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "fullcalendar-rails"
+gem "momentjs-rails"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
@@ -23,6 +25,7 @@ group :development, :test do
   gem "sass-rails", "~> 5.0"
   gem "selenium-webdriver"
   gem "sqlite3"
+  gem "faker"
 end
 
 group :development do
