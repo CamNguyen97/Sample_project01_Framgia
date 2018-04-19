@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-  <%= link_to t("page_admin.a_content"), class: "navbar-brand" %>
-  <div class="collapse navbar-collapse" id="navbarResponsive">
-    <%= render "page_admin/home/leftmenu" %>
-    <%= render "page_admin/home/headermenu" %>
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="index.html"><%= t "title_admin" %></a>
   </div>
+  <%= render "page_admin/home/headermenu" %>
+  <%= render "page_admin/home/leftmenu" %>
 </nav>
