@@ -9,13 +9,24 @@
       "data-turbolinks-track": "reload" %>
   </head>
 
-  <body>
-  <div id="wrapper">
-    <%= render "page_admin/home/header" %>
-    <div id="page-wrapper">
-     <%= yield %>
-    </div>
-  </div>
-  <%= javascript_include_tag "table" %>
+  <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <% if logged_in? && check_role? %>
+      <%= render "page_admin/home/header" %>
+      <div class="content-wrapper">
+        <div class="container-fluid">
+          <%= yield %>
+        </div>
+      </div>
+    <% else %>
+      <div class="not_login" >
+        <p><%= t "not_login" %></p>
+        <p>
+          <%= link_to t(".login"), login_path %>
+        </p>
+      </div>
+    <% end %>
   </body>
 </html>

@@ -6,10 +6,13 @@ git_source(:github) do |repo_name|
 end
 
 gem "bootstrap4-kaminari-views"
+gem "bcrypt", "3.1.11"
 gem "coffee-rails", "~> 4.2"
 gem "config"
+gem "figaro"
 gem "font-awesome-rails"
 gem "fuzzily"
+gem "i18n-js"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "puma", "~> 3.7"
@@ -19,6 +22,9 @@ gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "jquery-datatables-rails", "~> 3.4.0"
 gem "kaminari", "~> 1.1", ">= 1.1.1"
+gem "faker", "~> 1.8", ">= 1.8.7"
+gem "fullcalendar-rails"
+gem "momentjs-rails"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

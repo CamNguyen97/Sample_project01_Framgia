@@ -1,4 +1,4 @@
-class PageHome::EventController < PageHome::ApplicationController
+class EventController < ApplicationController
   def index
   end
 end
