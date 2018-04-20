@@ -1,5 +1,9 @@
 class PageAdmin::UsersController < PageAdmin::LoginController
   before_action :find_by_id, except: %i(index new create)
+  def index
+    @users = User.sort_alpha.page(params[Settings.begin_size]).per Settings.size_page
+  end
+
   def show
   	if @user.nil?
       flash[:danger] = t "no_user"

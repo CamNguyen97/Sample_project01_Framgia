@@ -1,4 +1,8 @@
 en:
+  save_chane: "Save changes"
+  add: "Add"
+  update: "Update"
+  delete: "Delete"
   wellcome: "Welcome to the My Website on the link below to activate your account:"
   hi: "Hi!"
   website: "-- Website --"
@@ -104,6 +108,12 @@ en:
         link: "Link"
       index:
         my_dashboard: "My Dashboard"
+    user:
+      index:
+        title: "Movie type"
+  login:
+    sessions_admin:
+      index:
     sessions:
       new:
         login: "Login"
@@ -123,6 +133,13 @@ en:
           movies_actor: "Movies or Actors"
   model:
     action: "Action"
+    create_at: "Create at"
+    updated_at: "Update at"
+    status: "Status"
+    id: "Id"
+    name: "Name"
+    disactive: "Disactived"
+    action: "Action"
     index: "STT"
     users:
       password: "Password"
@@ -130,8 +147,8 @@ en:
       address: "Adress"
       phone: "Phone"
       email: "Email"
+      role: "Role"
       status: "Status"
       role: "Role"
       create_at: "Create at"
       updated_at: "Update at"
-

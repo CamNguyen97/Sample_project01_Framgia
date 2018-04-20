@@ -14,3 +14,4 @@
 //= require dataTables.bootstrap.min
 //= require dataTables.responsive
 //= require jquery.flexslider
+//= require admin

@@ -1,0 +1,36 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <%= link_to t("dashboard") %>
+  </li>
+  <li class="breadcrumb-item active"><%= t ".title" %></li>
+  <%= button_tag t("add"), class: "btn btn-primary btn-add btn-movie-type" %>
+</ol>
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <%= render "headerTable" %>
+          </tr>
+        </thead>
+
+        <tbody>
+          <%  @movie_type.each_with_index do |item, index| %>
+          <tr>
+            <td><%= index_record index %></td>
+            <td><%= item.name %></td>
+            <td><%= item.created_at %></td>
+            <td><%= item.updated_at %></td>
+            <td>
+              <%= button_tag t("update"), data: item.id, class: "btn btn-info btn-add btn-movie-type-update" %>
+              <%= button_tag t("delete"), data: item.id, class: "btn btn-danger btn-add btn-movie-type-delete" %>
+              <%= link_to "delete", page_admin_movietypes_path(item.id), method: :delete %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
