@@ -8,18 +8,12 @@
         <%= link_to "#" do %>
           <i class="fa fa-user fa-fw"></i> <%= t "user_profile" %>
         <% end %>
-      </li>
-      <li>
-        <%= link_to "#" do %>
-          <i class="fa fa-gear fa-fw"></i> <%= t "setting" %>
-        <% end %>
-      </li>
-      <li class="divider"></li>
-      <li>
-        <%= link_to "#" do %>
-          <i class="fa fa-sign-out fa-fw"></i> <%= t "logout" %>
-        <% end %>
-      </li>
-    </ul>
+      </div>
+    </div>
+  </li>
+  <li class="nav-item">
+    <%= link_to logout_path, {method: :delete, class: "nav-link"} do %>
+      <i class="fa fa-fw fa-sign-out"></i><%= t ".logout" %>
+    <% end %>
   </li>
 </ul>

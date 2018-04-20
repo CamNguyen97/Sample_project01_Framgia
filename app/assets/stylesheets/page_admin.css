@@ -6,4 +6,12 @@
  *= require sb-admin-2
  *= require font-awesome
  *= require index_admin
+<<<<<<< HEAD
 */
+=======
+ *= require bootstrap.min
+ *= require sb-admin.min
+ *= require font-awesome
+ *= require error
+ */
+>>>>>>> fb2adab5072672f006504f7327eab95eddb140bb
