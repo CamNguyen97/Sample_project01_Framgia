@@ -19,8 +19,9 @@ en:
   number_s: "A"
   movies_seat: "Movie Seat Selection"
   search: "Search"
+  name: "Name"
+  studio: "Studios"
   user_name: "User name"
-  name: "name"
   seat: "Seats"
   number_phone: "Phone"
   adress: "Adress"
@@ -59,10 +60,6 @@ en:
   user_profile: "User Profile"
   setting: "Settings"
   loguot: "Logout"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   user_profile: "User Profile"
   setting: "Settings"
   loguot: "Logout"
@@ -96,7 +93,6 @@ en:
   success: "Login success! Wellcome."
   booking01: 'Please Enter your Name and Number of Seats'
   booking02: 'Please select '
->>>>>>> 159b31aa46d345daa87ac6d1f25a2c0899b45358
   layout:
     admin:
       title_admin: "Home Page Admin"
@@ -141,14 +137,8 @@ en:
           movies_actor: "Movies or Actors"
   model:
     action: "Action"
-<<<<<<< HEAD
     stt: "STT"
     disactive: "Unactive"
-=======
-<<<<<<< HEAD
-    stt: "STT"
-    disactive: "Unactive"
-=======
     disactive: "unactive"
     stt: "STT"
     create_at: "Create at"
@@ -159,28 +149,22 @@ en:
     disactive: "Disactived"
     action: "Action"
     index: "STT"
->>>>>>> 159b31aa46d345daa87ac6d1f25a2c0899b45358
     users:
       password: "Password"
       actived: "Actived"
       address: "Adress"
       phone: "Phone"
       email: "Email"
-<<<<<<< HEAD
-=======
       role: "Role"
->>>>>>> 159b31aa46d345daa87ac6d1f25a2c0899b45358
       status: "Status"
       role: "Role"
       create_at: "Create at"
       updated_at: "Update at"
-<<<<<<< HEAD
     seats:
       seat_type: "Seats type"
       cinemaroom: "Cinemaroom"
     cinemaroom:
       name: "Cinemaroom"
-=======
     schedule:
       show_case: "Show case"
       start_time: "Start time"
@@ -193,4 +177,3 @@ en:
       descreption: "Descreption"
       trailers: "Trailers"
       studio: "Studio"
->>>>>>> 159b31aa46d345daa87ac6d1f25a2c0899b45358

@@ -1,4 +1,11 @@
-$(document).ready(function(){
+$(document).ready(function() {
+  $(".btn-stdio").click(function() {
+    window.location.href = "/admin/studio/new";
+  });
+  $(".btn-studio-update").click(function() {
+    data = $(this).attr("data")
+    window.location.href = "/page_admin/studios/" + data + "/edit";
+  });
   $(".btn-seat").click(function() {
     window.location.href = "/admin/seats/new";
   });
@@ -55,5 +62,6 @@ $(document).ready(function(){
     data = $(this).attr("data")
     //console.log(data);
     window.location.href = "/page_admin/tickets/" + data + "/edit";
+>>>>>>> 76b13a03bd5b297a09b8faf0a3618e141578a136
   });
 });
