@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $(".btn-movies").click(function() {
+    window.location.href = "/admin/movies/new";
   $(".btn-movie-type").click(function() {
     window.location.href = "/page_admin/movietypes/new";
   $(".btn-ticket").click(function() {
@@ -7,6 +9,10 @@ $(document).ready(function() {
   $(".btn-users").click(function() {
     window.location.href = "#";
   });
+  $(".btn-movie-update").click(function() {
+    data = $(this).attr("data")
+    //console.log(data);
+    window.location.href = "/page_admin/movies/" + data + "/edit";
   $(".btn-movie-type-update").click(function() {
     data = $(this).attr("data")
     //console.log(data);

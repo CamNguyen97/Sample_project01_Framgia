@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get "/contact", to: "page_home/contact#index"
   get "/event", to: "page_home/event#index"
   get "/booking", to: "booking_ticket#index"
+  get "/admin/movies", to: "page_admin/movies#index"
+  get "/admin/movies/new", to: "page_admin/movies#new"
+  get "/admin/movies/new", to: "page_admin/movies#create"
   get "/movie", to: "page_home/movie#index"
   get "/schedules", to: "schedules#index"
   get "/signup", to: "page_admin/users#new"
@@ -50,4 +53,3 @@ Rails.application.routes.draw do
     resources :password_resets, only: [:new, :create, :edit, :update]
   end
 end
-
