@@ -1,0 +1,6 @@
+# translations:
+#   - file: "app/assets/javascripts/i18n/translations.js"
+#     only: "*"
+en:
+  booking01: 'Please Enter your Name and Number of Seats'
+  booking02: 'Please select '
