@@ -1,1 +1,24 @@
-seat: 1
+size_page: 10
+begin_size: 1
+booking_ticket:
+model:
+  movie:
+    num_movie_show: 5
+  users:
+    maximum_name: 50
+    maximum_email: 255
+    minimum_password: 6
+  cinemarooms:
+    maximum_num_row_seats: 50
+    maximum_num_of_seats: 50
+booking_ticket:
+  seat: 1
+number: 1
+num_hour: 2
+user:
+  name:
+    max_length: 30
+  email:
+    max_length: 255
+  password:
+    min_length: 6

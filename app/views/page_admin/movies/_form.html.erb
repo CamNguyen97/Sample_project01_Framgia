@@ -1,0 +1,43 @@
+<%= form_for [:page_admin, @movies] do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+   <%= f.label :produce_year %>
+   <%= f.date_field :produce_year, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :broadcasing_time %>
+    <%= f.text_field :broadcasing_time, class: "form-control" %>
+  </div>
+
+   <div class="form-group">
+    <%= f.label :trailer %>
+    <%= f.text_field :trailer, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :descreption %>
+    <%= f.text_area :descreption, cols: 20, rows: 6,class: "form-control" %>
+  </div>
+
+   <div class="form-group">
+    <%= f.label :studio_id %>
+    <%= f.select :studio_id, @list,
+      {include_blank: "Choose one",selected: @movies.studio_id},
+      {class: "form-control"} %>
+  </div>
+
+  <%= f.label :status %>
+  <div class="form-group">
+    <%= label :status, t("model.users.actived") %>
+    <%= f.radio_button :status, "1",:checked => true %>
+    <%= label :status, t("model.disactive") %>
+    <%= f.radio_button :status, "0" %>
+  </div>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

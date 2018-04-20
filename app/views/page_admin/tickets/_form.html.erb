@@ -1,0 +1,44 @@
+<%= form_for [:page_admin, @tickets] do |f| %>
+  <div class="form-group">
+    <%= f.label :pay_ticket %>
+    <%= f.text_field :pay_ticket, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :show_time %>
+    <%= f.date_field :show_time, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :seat_id %>
+    <%= f.select :seat_id, @list_seat,
+      {include_blank: "Choose one",selected: @tickets.seat_id},
+      {class: "form-control"} %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :cinemaroom_id %>
+    <%= f.select :cinemaroom_id, @list_cinemaroom,
+      {include_blank: "Choose one",selected: @tickets.cinemaroom_id},
+      {class: "form-control"} %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :movie_id %>
+    <%= f.select :movie_id, @list_movies,
+      {include_blank: "Choose one",selected: @tickets.movie_id},
+      {class: "form-control"} %>
+  </div>
+
+  <%= f.label :status %>
+  <div class="form-group">
+    <%= label :status, t("model.users.actived") %>
+    <%= f.radio_button :status, "1",:checked => true %>
+    <%= label :status, t("model.disactive") %>
+    <%= f.radio_button :status, "0" %>
+  </div>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
