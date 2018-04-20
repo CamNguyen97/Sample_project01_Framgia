@@ -1,4 +1,4 @@
-class PageAdmin::PasswordResetsController < PageAdmin::LoginController
+class PasswordResetsController < LoginController
   before_action :get_user, only: [:edit, :update]
   before_action :valid_user, only: [:edit, :update]
   before_action :check_expiration, only: [:edit, :update]

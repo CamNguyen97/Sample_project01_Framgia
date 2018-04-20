@@ -8,9 +8,9 @@ class MoviesController < Application2Controller
   end
   private
   def load_movie
-    @movie = Movie.find_by(id: params[:id])
-    #   flash[:danger] = "adadad"
-    #   redirect_to root_url
-    # end
+    @movie = Movie.find_by id: params[:id]
+  end
+  def get_movie_id
+    params.require(:movie).permit :id
   end
 end
