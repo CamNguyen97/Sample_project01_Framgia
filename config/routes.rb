@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "/contact", to: "page_home/contact#index"
   get "/event", to: "page_home/event#index"
   get "/booking", to: "booking_ticket#index"
+  get "/schedules", to: "schedules#index"
   get "/signup", to: "page_admin/users#new"
   post "/signup", to: "page_admin/users#create"
   get "/login", to: "page_admin/sessions#new"
