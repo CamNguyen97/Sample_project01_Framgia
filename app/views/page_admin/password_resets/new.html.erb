@@ -1,0 +1,18 @@
+<% provide :title, t("reset") %>
+<div class="main-content-agile">
+  <div class="sub-main-w3">
+  	<h2><%= t "reset" %></h2>
+    <%= form_for(:password_resets, url: page_admin_password_resets_path) do |f| %>
+      <%= f.label :email %>
+      <div class="pom-agile">
+        <span class="fa fa-envelope-o" aria-hidden="true"></span>
+        <%= f.email_field :email, class: "form-control",
+          placeholder: t("page_admin.sessions.new.email") %>
+      </div>
+      <br>
+      <div class="right-w3l">
+        <%= f.submit t("reset") %>
+      </div>
+    <% end %>
+  </div>
+</div>

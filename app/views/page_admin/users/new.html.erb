@@ -1,0 +1,53 @@
+<div class="main-content-agile">
+  <div class="sub-main-w3">
+    <h2><%= t ".signup" %></h2>
+    <%= form_for(@user, url: signup_path) do |f| %>
+      <%= render "shared/error_messages" %>
+      <%= f.label :user_name %>
+      <div class="pom-agile">
+        <span class="fa fa-user-o" aria-hidden="true"></span>
+        <%= f.text_field :name, class: "form-control",
+          placeholder: t("user_name") %>
+      </div>
+      <br>
+      <%= f.label :password %>
+      <div class="pom-agile">
+        <span class="fa fa-key" aria-hidden="true"></span>
+        <%= f.password_field :password, class: "form-control",
+          placeholder: t("password") %>
+      </div>
+      <br>
+      <%= f.label :password_confirmation %>
+      <div class="pom-agile">
+        <span class="fa fa-key" aria-hidden="true"></span>
+        <%= f.password_field :password_confirmation, class: "form-control",
+          placeholder: t("password") %>
+      </div>
+      <br>
+      <%= f.label :address %>
+      <div class="pom-agile">
+        <span class="fa fa-address-book-o" aria-hidden="true"></span>
+        <%= f.text_field :address, class: "form-control",
+          placeholder: t("adress") %>
+      </div>
+      <br>
+      <%= f.label :phone %>
+      <div class="pom-agile">
+        <span class="fa fa-phone" aria-hidden="true"></span>
+        <%= f.text_field :phone, class: "form-control",
+          placeholder: t("number_phone") %>
+      </div>
+      <br>
+      <%= f.label :email %>
+      <div class="pom-agile">
+        <span class="fa fa-envelope-o" aria-hidden="true"></span>
+        <%= f.email_field :email, class: "form-control",
+          placeholder: t("page_admin.sessions.new.email") %>
+      </div>
+      <br>
+      <div class="right-w3l">
+        <%= f.submit t("creat_account") %>
+      </div>
+    <% end %>
+  </div>
+</div>

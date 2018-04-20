@@ -1,0 +1,31 @@
+<div class="main-content-agile">
+  <div class="sub-main-w3">
+    <h2><%= t ".login" %></h2>
+    <%= form_for :sessions, url: login_path do |f| %>
+      <div class="pom-agile">
+        <span class="fa fa-envelope-o" aria-hidden="true"></span>
+        <%= f.email_field :email, class: "form-control",
+          placeholder: t("page_admin.sessions.new.email") %>
+      </div>
+      <br>
+      <div class="pom-agile">
+        <span class="fa fa-key" aria-hidden="true"></span>
+        <%= f.password_field :password, class: "form-control",
+          placeholder: t("password") %>
+      </div>
+      <div class="sub-w3l">
+        <%= f.label :remember_me do %>
+          <%= f.check_box :remember_me %>
+          <span><%= t ".remember_password" %></span>
+        <% end %>
+        <%= link_to t(".forgot_password"), new_page_admin_password_reset_path %>
+        <div class="clear"></div>
+        <%= link_to t(".register_account"), signup_path %>
+        <div class="clear"></div>
+      </div>
+      <div class="right-w3l">
+        <%= f.submit t(".login") %>
+      </div>
+    <% end %>
+  </div>
+</div>
