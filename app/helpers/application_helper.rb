@@ -5,10 +5,6 @@ module ApplicationHelper
   end
 
   def index_record index_stt
-    if index_stt.zero?
-      index_stt = 1
-    else
-      index_stt += 1
-    end
+    index_stt = index_stt.zero? ? index_stt = 1 : index_stt += 1
   end
 end

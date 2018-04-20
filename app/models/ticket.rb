@@ -7,5 +7,7 @@ class Ticket < ApplicationRecord
   scope :sort_alpha, -> do
     self.where(status: true).order(show_time: :asc).limit Settings.size_page
   end
-
+  validates :pay_ticket, presence: true
+  validates :show_time, presence: true
+  validates :status, presence: true
 end
