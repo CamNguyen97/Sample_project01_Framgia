@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20180410092228) do
     t.string "name"
     t.date "produce_year"
     t.integer "broadcasing_time"
-    t.text "descreption"
+    t.text "description"
     t.string "trailer"
     t.boolean "status"
     t.integer "studio_id"

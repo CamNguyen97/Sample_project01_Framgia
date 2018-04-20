@@ -19,6 +19,7 @@ gem "rails", "~> 5.1.5"
 gem "rubocop", require: false
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "bcrypt", "~> 3.1", ">= 3.1.11"
 gem "fullcalendar-rails"
 gem "momentjs-rails"
 

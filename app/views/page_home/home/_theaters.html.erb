@@ -1,5 +1,6 @@
 <div class="listview_1_of_3 images_1_of_3">
   <h3> <%= t "theater" %></h3>
+  <% @movies.each do |movie| %>
   <div class="content-left">
     <div class="listimg listimg_1_of_2">
       <%= link_to image_tag("pic9.jpg", alt: ""),"" %>
@@ -15,5 +16,6 @@
     </div>
     <div class="clear"></div>
   </div>
+  <% end %>
   <%= link_to t("see_all"), "#", class: "link2" %>
 </div>
