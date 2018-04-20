@@ -2,7 +2,13 @@
 //= require jquery_ujs
 //= require rails-ujs
 //= require turbolinks
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
 //= require_tree .
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
 //= require modernizr
 //= require jquery.min
 //= require example

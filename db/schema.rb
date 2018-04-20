@@ -81,9 +81,11 @@ ActiveRecord::Schema.define(version: 20180410092228) do
 
   create_table "schedules_cinemarooms", force: :cascade do |t|
     t.integer "cinemaroom_id"
+    t.integer "schedule_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cinemaroom_id"], name: "index_schedules_cinemarooms_on_cinemaroom_id"
+    t.index ["schedule_id"], name: "index_schedules_cinemarooms_on_schedule_id"
   end
 
   create_table "seats", force: :cascade do |t|

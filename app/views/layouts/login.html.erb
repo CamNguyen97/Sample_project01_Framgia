@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title><%= full_title yield(:title) %></title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag "page_admin", media: "all",
+    <%= stylesheet_link_tag "login", media: "all",
       "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application",
       "data-turbolinks-track": "reload" %>
   </head>
 
-  <body class="bg-dark">
-    <div class="container">
+  <body>
+    <div class="video-w3l" data-vide-bg="video/1">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
       <%= yield %>
     </div>
   </body>
