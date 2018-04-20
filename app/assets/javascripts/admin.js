@@ -1,6 +1,8 @@
 $(document).ready(function() {
   $(".btn-movie-type").click(function() {
     window.location.href = "/page_admin/movietypes/new";
+  $(".btn-ticket").click(function() {
+    window.location.href = "/admin/tickets/new";
   });
   $(".btn-users").click(function() {
     window.location.href = "#";
@@ -26,4 +28,9 @@ $(document).ready(function() {
   //       }
   //   });
   // });
+  $(".btn-ticket-update").click(function() {
+    data = $(this).attr("data")
+    //console.log(data);
+    window.location.href = "/page_admin/tickets/" + data + "/edit";
+  });
 });

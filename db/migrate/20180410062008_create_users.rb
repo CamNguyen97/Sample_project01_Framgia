@@ -10,7 +10,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.datetime :activated_at
       t.string :reset_digest
       t.datetime :reset_sent_at
-      t.string :adress
+      t.string :address
       t.integer :phone
       t.string :email
       t.boolean :status

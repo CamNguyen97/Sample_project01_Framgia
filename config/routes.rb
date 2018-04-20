@@ -3,6 +3,13 @@ Rails.application.routes.draw do
   get "/contact", to: "page_home/contact#index"
   get "/event", to: "page_home/event#index"
   get "/booking", to: "booking_ticket#index"
+  get "/movie", to: "page_home/movie#index"
+  get "/schedules", to: "schedules#index"
+  get "/signup", to: "page_admin/users#new"
+  post "/signup", to: "page_admin/users#create"
+  get "/login", to: "page_admin/sessions#new"
+  post "/login", to: "page_admin/sessions#create"
+  delete "/logout", to: "page_admin/sessions#destroy"
   root "page_home/home#index"
   get "/admin/user", to: "page_admin/users#index"
   get "/admin/Movietype", to: "page_admin/movietypes#index"
@@ -11,7 +18,6 @@ Rails.application.routes.draw do
   get "/admin/Movietype/update", to: "page_admin/movietypes#edit"
   patch "/admin/Movietype/upadte", to: "page_admin/movietypes#update"
   delete "/page_admin/movietypes/:id(.:format)", :to => "page_admin/movietypes#destroy"
-  root "page_home/homes#index"
 
   namespace :page_home do
     resources :home
@@ -21,9 +27,27 @@ Rails.application.routes.draw do
     resources :homes
     resources :users
     resources :movietypes
-  end
+  get "/signup", to: "users#new"
+  post "/signup", to: "users#create"
+  root "page_home/home#index"
+  resources :users
+  get "/about", to: "abouts#index"
+  get "/contact", to: "contacts#index"
+  get "/event", to: "events#index"
+  get "/booking", to: "booking_tickets#index"
+  # get "/movie", to: "home#show"
+  root "homes#index"
+  resources :movies
+  # namespace :page_home do
+  resources :homes
+   end
 
   namespace :login do
     resources :sessions_admin
+    resources :users
+    resources :account_activations, only: [:edit]
+    resources :sessions
+    resources :password_resets, only: [:new, :create, :edit, :update]
   end
 end
+

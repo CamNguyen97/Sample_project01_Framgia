@@ -1,0 +1,42 @@
+  <div class="content">
+  <div class="wrap">
+    <div class="content-top">
+      <div class="section group">
+        <div class="about span_1_of_2">
+          <h3><%= t "last_movie" %></h3>
+          <div class="about-top">
+            <div class="grid images_3_of_2">
+              <%= link_to image_tag("pic13.jpg", alt: "", class: "col"), "#" %>
+            </div>
+            <div class="desc span_3_of_2">
+              <h4><%= t "lorem" %></h4>
+              <p class="p-link"><%= link_to t("lorem"),"#", class: "link1" %></p>
+              <p><%= @movie.description %></p>
+              <%= link_to t("watch"), "#", class: "watch_but" %>
+              <%= link_to t("booking_ticket"), "#", class: "booking-ticket" %>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <%= link_to t("more_movie"), "#", class: "watch_but" %>
+        </div>
+        <div class="rightsidebar span_3_of_1">
+          <h3><%= t "most_premieres" %></h3>
+          <div class="small_box premier">
+            <%= link_to image_tag("pic15.jpg", alt: "", class: "col"), "#" %>
+            <div class="clear"></div>
+            <%= link_to t("see_all"), "#", class: "button" %>
+          </div>
+          <h3><%= t "last_new" %></h3>
+          <ul class="latest_news">
+            <li>
+              <span class="date"><%= t "time" %></span><br>
+              <%= link_to t("lorem"), "#", class: "button" %>
+            </li>
+          </ul>
+          <%= link_to t("see_all"), "#", class: "button" %>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
