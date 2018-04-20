@@ -1,4 +1,6 @@
 en:
+  schedule: "Schedules"
+  save_chane: "Save chane"
   save_chane: "Save changes"
   add: "Add"
   update: "Update"
@@ -57,6 +59,8 @@ en:
   user_profile: "User Profile"
   setting: "Settings"
   loguot: "Logout"
+<<<<<<< HEAD
+=======
   user_profile: "User Profile"
   setting: "Settings"
   loguot: "Logout"
@@ -134,6 +138,10 @@ en:
           movies_actor: "Movies or Actors"
   model:
     action: "Action"
+<<<<<<< HEAD
+    stt: "STT"
+    disactive: "Unactive"
+=======
     disactive: "unactive"
     stt: "STT"
     create_at: "Create at"
@@ -155,6 +163,11 @@ en:
       role: "Role"
       create_at: "Create at"
       updated_at: "Update at"
+    schedule:
+      show_case: "Show case"
+      start_time: "Start time"
+      end_time: "End time"
+      date_movie: "Date movies"
     movies:
       name: "name"
       product_year: "Product year"

@@ -1,0 +1,32 @@
+<%= form_for [:page_admin, @schedules] do |f| %>
+<div class="form-group">
+  <%= f.label :show_case %>
+  <%= f.text_field :show_case, class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :start_time %>
+  <%= f.date_field :start_time, class: "form-control", value: @schedules.start_time || Date.today.strftime("%Y-%m-%d") %>
+</div>
+
+<div class="form-group">
+  <%= f.label :end_time %>
+  <%= f.date_field :end_time, class: "form-control", value: @schedules.end_time || Date.today.strftime("%Y-%m-%d") %>
+</div>
+
+<div class="form-group">
+  <%= f.label :date_movie %>
+  <%= f.date_field :date_movie ,class: "form-control", value: @schedules.date_movie || Date.today.strftime("%Y-%m-%d") %>
+</div>
+
+
+<%= f.label :status %>
+<div class="form-group">
+  <%= label :status, t("model.users.actived") %>
+  <%= f.radio_button :status, "1",:checked => true %>
+  <%= label :status, t("model.disactive") %>
+  <%= f.radio_button :status, "0" %>
+</div>
+
+<%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
