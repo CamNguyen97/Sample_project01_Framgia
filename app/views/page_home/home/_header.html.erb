@@ -10,6 +10,15 @@
           <li><%= link_to t(".about"), "#" %></li>
           <li><%= link_to t(".movies_event"), "#" %></li>
           <li><%= link_to t(".contact"), "#" %></li>
+          <% if logged_in? %>
+            <li>
+              <%= link_to logout_path, {method: :delete, class: "nav-link"} do %>
+                <i class="fa fa-fw fa-sign-out"></i><%= t ".logout" %>
+              <% end %>
+            </li>
+          <% else %>
+            <li><%= link_to "Log in", login_path %></li>
+          <% end %>
         </ul>
       </div>
       <div class="clear"></div>

@@ -4,7 +4,7 @@ class CreateMovies < ActiveRecord::Migration[5.1]
       t.string :name
       t.date :produce_year
       t.integer :broadcasing_time
-      t.text :descreption
+      t.text :description
       t.string :trailer
       t.boolean :status
       t.references :studio, index: true, foreign_key: true

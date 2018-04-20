@@ -1,4 +1,5 @@
 /*
+<<<<<<< HEAD
  *= require bootstrap
  *= require metisMenu.min
  *= require dataTables.bootstrap
@@ -6,4 +7,8 @@
  *= require sb-admin-2
  *= require font-awesome
  *= require index_admin
-*/
+ *= require bootstrap.min
+ *= require sb-admin.min
+ *= require font-awesome
+ *= require error
+ */
