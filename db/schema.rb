@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20180410092228) do
   end
 
   create_table "schedules_cinemarooms", force: :cascade do |t|
+    t.integer "schedule_id"
     t.integer "cinemaroom_id"
     t.integer "schedule_id"
     t.datetime "created_at", null: false
