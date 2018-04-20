@@ -1,5 +1,4 @@
-//= require jquery3
-//= require jquery_ujs
+//= require jquery.min
 //= require rails-ujs
 //= require turbolinks
 //= require i18n
@@ -10,6 +9,8 @@
 //= require i18n.js
 //= require i18n/translations
 //= require modernizr
-//= require jquery.min
-//= require example
+//= require bootstrap.min
+//= require jquery.dataTables.min
+//= require dataTables.bootstrap.min
+//= require dataTables.responsive
 //= require jquery.flexslider

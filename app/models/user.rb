@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_many :booking_tickets, dependent: :destroy
   enum role: {user: 0, admin: 1}, _suffix: true
+  scope :sort_alpha, -> do
+    where(status: true).order(name: :asc).limit Settings.size_page
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   VALID_PHONE_REGEX = /^((\+841|01)[2689]|(\+849|09))[0-9]{8}$/
   validates :name, presence: true,
@@ -25,7 +27,7 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true,
     length: {minimum: Settings.password_min}, allow_nil: true
-	
+
 	class << self
 
     def digest string

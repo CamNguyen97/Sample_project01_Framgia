@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   root "page_home/home#index"
   resources :users
-  
+
 
   namespace :page_home do
     resources :home
@@ -23,10 +23,16 @@ Rails.application.routes.draw do
 
   namespace :page_admin do
     resources :home
+    resources :user
+    resources :bookings
+  end
+
+  namespace :login do
+    resources :sessions_admin
     resources :users
     resources :account_activations, only: [:edit]
     resources :sessions
     resources :password_resets, only: [:new, :create, :edit, :update]
   end
 end
- 
+

@@ -48,6 +48,11 @@ en:
   more_movie: "More Movies"
   most_premieres: "Most Premieres"
   last_new: "Latest News"
+<<<<<<< HEAD
+  user_profile: "User Profile"
+  setting: "Settings"
+  loguot: "Logout"
+=======
   unvalid: "No Invalid"
   not_actived: "User not actived"
   unactived: "Account not activated. Check your email for the activation link."
@@ -78,6 +83,7 @@ en:
   success: "Login success! Wellcome."
   booking01: 'Please Enter your Name and Number of Seats'
   booking02: 'Please select '
+>>>>>>> 4f3af1225c1cf1898179206fa9f94af60c2bedae
   layout:
     admin:
       title_admin: "Home Page Admin"
@@ -114,3 +120,17 @@ en:
           find_movie: "Find a Movie:"
           movie_list: "Movie list"
           movies_actor: "Movies or Actors"
+  model:
+    action: "Action"
+    index: "STT"
+    users:
+      password: "Password"
+      actived: "Actived"
+      address: "Adress"
+      phone: "Phone"
+      email: "Email"
+      status: "Status"
+      role: "Role"
+      create_at: "Create at"
+      updated_at: "Update at"
+

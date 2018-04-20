@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem "bootstrap4-kaminari-views"
 gem "bcrypt", "3.1.11"
 gem "coffee-rails", "~> 4.2"
 gem "config"
@@ -19,6 +20,8 @@ gem "rails", "~> 5.1.5"
 gem "rubocop", require: false
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "jquery-datatables-rails", "~> 3.4.0"
+gem "kaminari", "~> 1.1", ">= 1.1.1"
 gem "bcrypt", "~> 3.1", ">= 3.1.11"
 gem "fullcalendar-rails"
 gem "momentjs-rails"
@@ -29,7 +32,7 @@ group :development, :test do
   gem "sass-rails", "~> 5.0"
   gem "selenium-webdriver"
   gem "sqlite3"
-  gem "faker"
+  gem "faker", "~> 1.8", ">= 1.8.7"
 end
 
 group :development do
