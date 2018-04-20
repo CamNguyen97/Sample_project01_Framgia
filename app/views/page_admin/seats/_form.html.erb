@@ -1,0 +1,23 @@
+<%= form_for [:page_admin, @seats] do |f| %>
+  <div class="form-group">
+    <%= f.label :seat_type %>
+    <%= f.select :seat_type, ([["Chair", "Chair"], ["Chair VIP", "Chair VIP"]]),  {include_blank: "Choose one",selected: @seats.seat_type}, {class: "form-control"} %>
+  </div>
+
+  <div class="form-group">
+    <%= label :cinemaroom_id, t("model.cinemaroom.name") %>
+    <%= f.select :cinemaroom_id, @list,
+      {include_blank: "Choose one",selected: @seats.cinemaroom_id},
+      {class: "form-control"} %>
+  </div>
+
+  <%= f.label :status %>
+  <div class="form-group">
+    <%= label :status, t("model.users.actived") %>
+    <%= f.radio_button :status, "1",:checked => true %>
+    <%= label :status, t("model.disactive") %>
+    <%= f.radio_button :status, "0" %>
+  </div>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

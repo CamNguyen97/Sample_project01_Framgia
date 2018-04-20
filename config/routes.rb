@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get "/contact", to: "page_home/contact#index"
   get "/event", to: "page_home/event#index"
   get "/booking", to: "booking_ticket#index"
+  get "/admin/seats", to: "page_admin/seats#index"
+  get "/admin/seats/new", to: "page_admin/seats#new"
+  post "/admin/seats/new", to: "page_admin/seats#create"
   get "/admin/schedules", to: "page_admin/schedules#index"
   get "/admin/schedules/new", to: "page_admin/schedules#new"
   post "/admin/schedules/new", to: "page_admin/schedules#create"
@@ -30,6 +33,7 @@ Rails.application.routes.draw do
   end
 
   namespace :page_admin do
+    resources :seats
     resources :schedules
     resources :homes
     resources :users

@@ -1,13 +1,24 @@
 $(document).ready(function(){
+  $(".btn-seat").click(function() {
+    window.location.href = "/admin/seats/new";
+  });
+  $(".btn-seat-update").click(function() {
+    data = $(this).attr("data")
+    window.location.href = "/page_admin/seats/"+ data + "/edit";
+  });
   $(".btn-schedules").click(function() {
     window.location.href = "/admin/schedules/new";
+  });
   $(".btn-schedules-update").click(function() {
     data = $(this).attr("data")
     window.location.href = "/page_admin/schedules/" +data + "/edit";
+  });
   $(".btn-movies").click(function() {
     window.location.href = "/admin/movies/new";
+  });
   $(".btn-movie-type").click(function() {
     window.location.href = "/page_admin/movietypes/new";
+  });
   $(".btn-ticket").click(function() {
     window.location.href = "/admin/tickets/new";
   });
@@ -18,10 +29,11 @@ $(document).ready(function(){
     data = $(this).attr("data")
     //console.log(data);
     window.location.href = "/page_admin/movies/" + data + "/edit";
+  });
   $(".btn-movie-type-update").click(function() {
     data = $(this).attr("data")
     //console.log(data);
-     window.location.href = "/page_admin/movietypes/"+ data + "/edit";
+    window.location.href = "/page_admin/movietypes/"+ data + "/edit";
   });
   //  $(".btn-movie-type-delete").click(function() {
   //   data = $(this).attr("data")
