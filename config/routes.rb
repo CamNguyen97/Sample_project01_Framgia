@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   namespace :page_admin do
     resources :home
     resources :user
+    resources :tickets
     resources :bookings
   end
 

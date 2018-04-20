@@ -15,17 +15,23 @@
         </thead>
 
         <tbody>
-          <% @users.each_with_index do |item, index| %>
+          <% @tickets.each_with_index do |item, index| %>
           <tr>
             <td><%= index_record index %></td>
-            <td><%= item.name %></td>
-            <td><%= item.activated %></td>
-            <td><%= item.adress %></td>
-            <td><%= item.role%></td>
-            <td><%= item.phone %></td>
-            <td><%= item.email %></td>
+            <td><%= item.pay_ticket %></td>
+            <td><%= item.show_time %></td>
+            <td><%= Seat.find_by(id: item.seat_id).seat_type == true ? "Chair VIP" : "Chair" %></td>
+            <td><%= Movie.find_by(id: item.movie_id).name %></td>
+            <td><%= item.cinemaroom_id %></td>
             <td><%= item.created_at %></td>
             <td><%= item.updated_at %></td>
+            <td><%= item.status %></td>
+           <!--  <td>
+              <%= button_tag t("update"), data: item.id,
+                class: "btn btn-info btn-add btn-ticket-update" %>
+              <%= button_tag t("delete"), data: item.id,
+                class: "btn btn-danger btn-add btn-ticket-delete" %>
+            </td> -->
           </tr>
           <% end %>
         </tbody>
