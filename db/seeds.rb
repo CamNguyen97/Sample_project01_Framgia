@@ -72,7 +72,8 @@
 
 # 10.times do |n|
 #   SchedulesCinemaroom.create(
-#     _cinemaroom_id: Faker::Number.between(1, 10)
+#     cinemaroom_id: Faker::Number.between(1, 10),
+#     schedule_id: Faker::Number.between(1, 10)
 #     )
 # end
 
@@ -106,7 +107,6 @@
 #     movitype_id: Faker::Number.between(1, 10)
 #     )
 # end
-=======
  # 10.times do |n|
  #   User.create(name: Faker::Name.name,
  #     password: "12345678",

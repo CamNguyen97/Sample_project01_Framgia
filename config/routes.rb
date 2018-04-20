@@ -15,11 +15,16 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   root "page_home/home#index"
   resources :users
-
-
-  namespace :page_home do
-    resources :home
-  end
+  get "/about", to: "abouts#index"
+  get "/contact", to: "contacts#index"
+  get "/event", to: "events#index"
+  get "/booking", to: "booking_tickets#index"
+  # get "/movie", to: "home#show"
+  root "homes#index"
+  resources :movies
+  # namespace :page_home do
+  resources :homes
+  # end
 
   namespace :page_admin do
     resources :home

@@ -1,7 +1,6 @@
 size_page: 10
 begin_size: 1
-<<<<<<< HEAD
-=======
+booking_ticket:
 model:
   movie:
     num_movie_show: 5
@@ -23,4 +22,3 @@ user:
     max_length: 255
   password:
     min_length: 6
->>>>>>> ea0838ef7ca8ac0f9344ef3c527787cbd5d5f1a7
