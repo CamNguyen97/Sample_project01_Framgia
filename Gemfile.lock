@@ -99,6 +99,8 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.23)
+    figaro (1.1.1)
+      thor (~> 0.14)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
     fuzzily (0.3.3)
@@ -239,6 +241,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   config
+  figaro
   font-awesome-rails
   fuzzily
   i18n-js

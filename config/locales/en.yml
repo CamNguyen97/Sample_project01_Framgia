@@ -13,6 +13,7 @@ en:
   movies_seat: "Movie Seat Selection"
   search: "Search"
   user_name: "User name"
+  name: "name"
   seat: "Seats"
   number_phone: "Phone"
   adress: "Adress"
@@ -54,6 +55,11 @@ en:
   no_user: "No User!"
   mails_send: "noreply@example.com"
   ac_active: "Account activation"
+  unactived: "Account not activated. Check your email for the activation link."
+  check_infor: "Please check your email to activate your account."
+  no_users: "No User!"
+  mails_send: "noreply@example.com"
+  account_active: "Account activation"
   mail_to: "to@example.org"
   reset: "Reset password"
   send_email: "Email sent with password reset instructions"
@@ -70,6 +76,8 @@ en:
     your password will stay as it is."
   not_login: "Not login, please login."
   success: "Login success! Wellcome."
+  booking01: 'Please Enter your Name and Number of Seats'
+  booking02: 'Please select '
   layout:
     admin:
       title_admin: "Home Page Admin"

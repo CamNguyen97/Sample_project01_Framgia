@@ -8,6 +8,7 @@ end
 gem "bcrypt", "3.1.11"
 gem "coffee-rails", "~> 4.2"
 gem "config"
+gem "figaro"
 gem "font-awesome-rails"
 gem "fuzzily"
 gem "i18n-js"

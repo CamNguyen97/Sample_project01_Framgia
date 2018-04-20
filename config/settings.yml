@@ -1,8 +1,11 @@
-host: "localhost:3000"
-role: 1
-seat: 1
+booking_ticket:
+  seat: 1
 number: 1
-user_max: 30
-email_max: 255
-password_min: 6
 num_hour: 2
+user:
+  name:
+    max_length: 30
+  email:
+    max_length: 255
+  password:
+    min_length: 6

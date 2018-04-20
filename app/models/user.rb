@@ -33,14 +33,14 @@ class User < ApplicationRecord
     user == current_user
   end
 
-  def authenticated? attribute, token
+  def authenticated_two? attribute, token
     digest = send "#{attribute}_digest"
     return false if digest.nil?
     BCrypt::Password.new(digest).is_password? token
   end
 
   def forget
-    update_attribute :remember_digest, nil
+    update_attributes remember_digest: nil
   end
 
   def activate
@@ -72,6 +72,6 @@ class User < ApplicationRecord
 
   def create_activation_digest
     self.activation_token  = User.new_token
-    self.activation_digest = User.digest(activation_token)
+    self.activation_digest = User.digest activation_token
   end
 end

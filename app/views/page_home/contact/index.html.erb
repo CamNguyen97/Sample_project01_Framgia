@@ -7,20 +7,20 @@
             <h3><%= t "contact_us" %></h3>
             <%= form_for :person do |f| %>
               <div>
-                <%= label_tag t("user_name") %>
+                <%= label_tag t "user_name" %>
                 <%= f.text_field :first_name %>
               </div>
               <div>
-                <%= label_tag t("email_contact") %>
+                <%= label_tag t "email_contact" %>
                 <%= f.text_field :first_name %>
               </div>
               <div>
-                <%= label_tag t("mobile") %>
+                <%= label_tag t "mobile" %>
                 <%= f.text_field :first_name %>
               </div>
               <div>
-                <%= label_tag t("subject") %>
-                <%= text_area(:comment, :text, size: "20x30") %>
+                <%= label_tag t "subject" %>
+                <%= text_area :comment, :text %>
               </div>
               <%= f.submit %>
             <% end %>

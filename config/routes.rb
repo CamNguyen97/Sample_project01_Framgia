@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   post "/login", to: "page_admin/sessions#create"
   delete "/logout", to: "page_admin/sessions#destroy"
   root "page_home/home#index"
+  get "/signup", to: "users#new"
+  post "/signup", to: "users#create"
+  root "page_home/home#index"
+  resources :users
+  
 
   namespace :page_home do
     resources :home
