@@ -49,6 +49,12 @@ en:
   most_premieres: "Most Premieres"
   last_new: "Latest News"
   unvalid: "No Invalid"
+  not_actived: "User not actived"
+  unactived: "Account not activated. Check your email for the activation link."
+  check_infor: "Please check your email to activate your account."
+  no_user: "No User!"
+  mails_send: "noreply@example.com"
+  ac_active: "Account activation"
   unactived: "Account not activated. Check your email for the activation link."
   check_infor: "Please check your email to activate your account."
   no_users: "No User!"
@@ -68,6 +74,8 @@ en:
   two_hour: "This link will expire in two hours."
   content_reset_pass: "If you did not request your password to be reset, please ignore this email and
     your password will stay as it is."
+  not_login: "Not login, please login."
+  success: "Login success! Wellcome."
   booking01: 'Please Enter your Name and Number of Seats'
   booking02: 'Please select '
   layout:
