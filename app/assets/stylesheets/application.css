@@ -13,5 +13,10 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
- *= require_directory "../../../vendor/assets/stylesheets"
+ *= require colorbox
+ *= require custom-cgv
+ *= require g-erp-cgv
+ *= require madisonisland
+ *= require enterprise
+ *= require style
  */

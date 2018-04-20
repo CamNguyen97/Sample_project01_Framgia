@@ -1,0 +1,23 @@
+<% provide :title, t("add") %>
+<% provide :button_text, t("save_chane") %>
+<h1><%= t "add" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:page_admin, @movie_type]  do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <%= f.label :status %>
+  <div class="form-group">
+    <%= label :status, t("model.users.actived") %>
+    <%= f.radio_button :status, "1",:checked => true %>
+    <%= label :status, t("model.disactive") %>
+    <%= f.radio_button :status, "0" %>
+  </div>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
+  </div>
+</div>

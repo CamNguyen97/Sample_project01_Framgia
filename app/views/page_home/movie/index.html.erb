@@ -1,0 +1,21 @@
+<% @movies.each do |movie| %>
+<div class="listview_1_of_3 images_1_of_3">
+  <h3><%= movie.name %></h3>
+  <div class="content-left">
+    <div class="listimg listimg_1_of_2">
+      <%= link_to image_tag("pic.jpg", alt: ""), "" %>
+    </div>
+    <div class="text list_1_of_2">
+      <div class="extra-wrap">
+        <div class="data"><%= movie.produce_year %></div>
+        <%= link_to "" do %>
+          <strong><%= t "lorem" %></strong>
+        <% end %>
+        <br>
+        <span class="text-top"><%= movie.description %></span>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<%end%>

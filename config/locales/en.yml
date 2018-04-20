@@ -1,14 +1,29 @@
 en:
   schedule: "Schedules"
   save_chane: "Save chane"
+  save_chane: "Save changes"
+  add: "Add"
+  update: "Update"
+  delete: "Delete"
+  wellcome: "Welcome to the My Website on the link below to activate your account:"
+  hi: "Hi!"
+  website: "-- Website --"
+  creat_account: "Create my account"
+  signup: "Sign up"
+  password: "Password"
+  password_confirmation: "Password confirmation"
   email_contact: "Email"
+  save_chane: "Save chane"
   mobile: "Mobile no"
   subject: "Subject"
   number_s: "A"
   movies_seat: "Movie Seat Selection"
   search: "Search"
-  name: "Name"
+  user_name: "User name"
+  name: "name"
   seat: "Seats"
+  number_phone: "Phone"
+  adress: "Adress"
   confirm_selection: "Confirm Selection"
   screen: "Screen this way"
   search_seat: "Start Selecting"
@@ -37,12 +52,48 @@ en:
   lorem: "Our Tips of gallery Template diam"
   text_lorem: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   watch: "Watch in HD"
+  booking_ticket: Booking Ticket
   more_movie: "More Movies"
   most_premieres: "Most Premieres"
   last_new: "Latest News"
   user_profile: "User Profile"
   setting: "Settings"
   loguot: "Logout"
+<<<<<<< HEAD
+=======
+  user_profile: "User Profile"
+  setting: "Settings"
+  loguot: "Logout"
+  unvalid: "No Invalid"
+  not_actived: "User not actived"
+  unactived: "Account not activated. Check your email for the activation link."
+  check_infor: "Please check your email to activate your account."
+  no_user: "No User!"
+  mails_send: "noreply@example.com"
+  ac_active: "Account activation"
+  unactived: "Account not activated. Check your email for the activation link."
+  check_infor: "Please check your email to activate your account."
+  no_users: "No User!"
+  mails_send: "noreply@example.com"
+  account_active: "Account activation"
+  mail_to: "to@example.org"
+  reset: "Reset password"
+  send_email: "Email sent with password reset instructions"
+  not_email: "Email address not found"
+  not_empty: "can't be empty"
+  reset_pass_success: "Password has been reset."
+  reset_pass_expired: "Password reset has expired."
+  account_actived: "Account activated!"
+  actived_link: "Invalid activation link"
+  update_pass: "Update password"
+  click_reset: "To reset your password click the link below:"
+  two_hour: "This link will expire in two hours."
+  content_reset_pass: "If you did not request your password to be reset, please ignore this email and
+    your password will stay as it is."
+  not_login: "Not login, please login."
+  success: "Login success! Wellcome."
+  booking01: 'Please Enter your Name and Number of Seats'
+  booking02: 'Please select '
   layout:
     admin:
       title_admin: "Home Page Admin"
@@ -62,12 +113,16 @@ en:
         link: "Link"
       index:
         my_dashboard: "My Dashboard"
+    user:
+      index:
+        title: "Movie type"
   login:
     sessions_admin:
       index:
+    sessions:
+      new:
         login: "Login"
         email: "Email address"
-        password: "Password"
         remember_password: "Remember Password"
         register_account: " Register an Account"
         forgot_password: "Forgot Password?"
@@ -83,14 +138,27 @@ en:
           movies_actor: "Movies or Actors"
   model:
     action: "Action"
+<<<<<<< HEAD
     stt: "STT"
     disactive: "Unactive"
+=======
+    disactive: "unactive"
+    stt: "STT"
+    create_at: "Create at"
+    updated_at: "Update at"
+    status: "Status"
+    id: "Id"
+    name: "Name"
+    disactive: "Disactived"
+    action: "Action"
+    index: "STT"
     users:
       password: "Password"
       actived: "Actived"
       address: "Adress"
       phone: "Phone"
       email: "Email"
+      role: "Role"
       status: "Status"
       role: "Role"
       create_at: "Create at"
@@ -100,3 +168,10 @@ en:
       start_time: "Start time"
       end_time: "End time"
       date_movie: "Date movies"
+    movies:
+      name: "name"
+      product_year: "Product year"
+      broadcasing_time: "Broadcasing time"
+      descreption: "Descreption"
+      trailers: "Trailers"
+      studio: "Studio"
