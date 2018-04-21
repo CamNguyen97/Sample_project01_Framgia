@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "homes#index"
-  
+
   get "/about", to: "abouts#index"
   get "/contact", to: "contacts#index"
   get "/event", to: "events#index"
