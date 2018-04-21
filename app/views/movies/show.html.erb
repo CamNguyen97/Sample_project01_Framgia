@@ -16,7 +16,7 @@
               <p><%= @movie.description %></p>
               <p><%= @movie.trailer %></p>
               <%= link_to t("watch"), "#", class: "watch_but" %>
-              <%= link_to t("booking_ticket"), "#", class: "booking-ticket" %>
+              <%= link_to t("booking_ticket"), schedule_path(@movie), class: "booking-ticket" %>
             </div>
             <div class="clear"></div>
           </div>

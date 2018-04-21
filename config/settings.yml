@@ -1,3 +1,5 @@
+host: "localhost:3000"
+role: 1
 size_page: 10
 begin_size: 1
 booking_ticket:

@@ -16,6 +16,9 @@ Rails.application.configure do
   end
 
   config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_caching = false
+  config.action_mailer.default_url_options = { host: Settings.host }
   config.active_support.deprecation = :log
   config.active_record.migration_error = :page_load
   config.assets.debug = true

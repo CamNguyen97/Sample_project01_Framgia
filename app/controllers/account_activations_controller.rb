@@ -1,4 +1,4 @@
-class PageAdmin::AccountActivationsController < PageAdmin::LoginController
+class AccountActivationsController < LoginController
   def new
   end
 
