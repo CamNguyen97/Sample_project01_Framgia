@@ -9,6 +9,7 @@ class SessionsController < LoginController
           log_in user
           flash[:danger] = t "success"
           params[:sessions][:remember_me] == Settings.number ? remember(user) : forget(user)
+          byebug
           if user.role == Settings.role
             redirect_to page_admin_homes_url
           else
