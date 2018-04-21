@@ -7,14 +7,14 @@
                   <div class="tab-content showtimes">
                      <div class="product-collateral toggle-content tabs tabs-cgv-movie-cites">
                         <dl id="collateral-tabs" class="collateral-tabs">
-                           <dt class="tab current">
-                              <span>Hồ Chí Minh</span>
-                           </dt>
                            <dd class="tab-container current">
                               <div class="product-collateral toggle-content tabs tabs-cgv-movie-type">
                                  <ul class="toggle-tabs">
                                     <li class="last current">
-                                       <span>2D Phụ Đề Việt</span>
+                                       <span><%= t "view_schedule" %></span>
+                                    </li>
+                                    <li class="last current">
+                                       <span><%= link_to t("come_back_home"), root_path %></span>
                                     </li>
                                  </ul>
                                  <dl id="collateral-tabs" class="collateral-tabs">
@@ -22,16 +22,17 @@
                                        <div class="tab-content showtimes">
                                           <div class="site sitecgv">
                                              <div class="site">
-                                                <h3>Name Film</h3>
+                                                <h3><%= @movie_name.name %></h3>
                                              </div>
                                              <div class="cinema 2d">
-                                                <h4>Rạp 2D</h4>
+                                                <h4><%= t "type_schedule" %></h4>
                                              </div>
                                              <div id="schedule_display">
-                                                <% @cinemaroom.each_with_index do |item| %>
+                                                <% @cinemaroom.each do |item| %>
                                                    <ul class="products-grid-movie tab-showtime" >
                                                       <li class="item" >
                                                          <%= link_to booking_path do %>
+                                                            <span><%= t "room" %><%= item.cinemaroom.id %></span><br>
                                                             <span><%= item.schedule.date_movie.strftime("%d/%m/%Y") %></span><br>
                                                             <span><%= item.schedule.start_time.strftime("%H:%M") %></span><br>
                                                             <span><%= item.cinemaroom.num_of_seats %></span><br>
@@ -60,7 +61,9 @@
                   </div>
                </dd>
                <dt class="tab">
-                  <div class="day" onclick="getSelectDay(18005100, &#39;20180420&#39;);"><span>04</span><em>Fri</em><strong>20</strong></div>
+                  <div class="day" onclick="getSelectDay(18005100, &#39;20180420&#39;);">
+                     <%= @schedules.schedule.date_movie %>
+                  </div>
                </dt>
                <dd class="tab-container">
                   <div class="tab-content showtimes"></div>

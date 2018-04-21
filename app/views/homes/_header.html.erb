@@ -6,10 +6,10 @@
       </div>
       <div class="nav-wrap">
         <ul class="group" id="example-one">
-          <li class="current_page_item"><%= link_to t(".home"), "#" %></li>
-          <li><%= link_to t(".about"), "#" %></li>
-          <li><%= link_to t(".movies_event"), "#" %></li>
-          <li><%= link_to t(".contact"), "#" %></li>
+          <li class="current_page_item"><%= link_to t(".home"), root_path %></li>
+          <li><%= link_to t(".about"), about_path %></li>
+          <li><%= link_to t(".movies_event"), event_path %></li>
+          <li><%= link_to t(".contact"), contact_path %></li>
           <% if logged_in? %>
             <li>
               <%= link_to logout_path, {method: :delete, class: "nav-link"} do %>
@@ -34,7 +34,7 @@
       <div id="reservation-form">
         <fieldset>
           <div class="field">
-            <%= label_tag t "page_home.home._header.find_movie" %>
+            <%= label_tag t "home._header.find_movie" %>
             <%= select_tag "colors",
               "<option>#{t "search"}</option>".html_safe,
               class:"select2",multiple: false %>
