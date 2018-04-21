@@ -1,16 +1,16 @@
-class PageAdmin::SessionsController < PageAdmin::LoginController
+class SessionsController < LoginController
   def new
   end
 
   def create
     user = User.find_by email: params[:sessions][:email].downcase
-    if user && user.authenticate?(:remember,params[:sessions][:password])
+    if user && !user.authenticated?(:remember, params[:sessions][:password])
       if user.activated?
           log_in user
           flash[:danger] = t "success"
           params[:sessions][:remember_me] == Settings.number ? remember(user) : forget(user)
           if user.role == Settings.role
-            redirect_to page_admin_home_index_url
+            redirect_to page_admin_homes_url
           else
             redirect_to root_url
           end
