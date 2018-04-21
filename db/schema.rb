@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180410064342) do
+ActiveRecord::Schema.define(version: 20180410092228) do
 
   create_table "booking_tickets", force: :cascade do |t|
     t.boolean "status"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20180410064342) do
     t.datetime "updated_at", null: false
     t.index ["ticket_id"], name: "index_booking_tickets_on_ticket_id"
     t.index ["user_id"], name: "index_booking_tickets_on_user_id"
+  end
+
+  create_table "cinemarooms", force: :cascade do |t|
+    t.integer "num_row_seats"
+    t.integer "num_of_seats"
+    t.text "description"
+    t.boolean "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "movie_schedules", force: :cascade do |t|
@@ -58,6 +67,34 @@ ActiveRecord::Schema.define(version: 20180410064342) do
     t.boolean "status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.integer "show_case"
+    t.date "start_time"
+    t.date "end_time"
+    t.date "date_movie"
+    t.boolean "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "schedules_cinemarooms", force: :cascade do |t|
+    t.integer "schedule_id"
+    t.integer "cinemaroom_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cinemaroom_id"], name: "index_schedules_cinemarooms_on_cinemaroom_id"
+    t.index ["schedule_id"], name: "index_schedules_cinemarooms_on_schedule_id"
+  end
+
+  create_table "seats", force: :cascade do |t|
+    t.boolean "seat_type"
+    t.boolean "status"
+    t.integer "cinemaroom_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cinemaroom_id"], name: "index_seats_on_cinemaroom_id"
   end
 
   create_table "studios", force: :cascade do |t|
