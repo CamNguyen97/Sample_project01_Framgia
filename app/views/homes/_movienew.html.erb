@@ -9,7 +9,7 @@
       <div class="extra-wrap">
         <div class="data"><%= movie.produce_year %></div>
         <%= link_to movie do %>
-          <strong><%= t "lorem" %></strong>
+          <strong><%= movie.name %></strong>
         <% end %>
         <br>
         <span class="text-top"><%= movie.description %></span>
@@ -18,5 +18,4 @@
     <div class="clear"></div>
   </div>
   <% end %>
-  <%= link_to t("see_all"), movies_path, class: "link2" %>
 </div>

@@ -8,7 +8,8 @@ Rails.application.config.assets.precompile += %w( home_slide.js
   jquery.vide.min.js
   login.css
   login.js
-  booking.js)
+  booking.js
+  admin.js)
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
 # Add Yarn node_modules folder to the asset load path.

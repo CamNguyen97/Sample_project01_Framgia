@@ -9,12 +9,13 @@
               <%= link_to image_tag("pic13.jpg", alt: "", class: "col"), "#" %>
             </div>
             <div class="desc span_3_of_2">
-              <h4><%= t "lorem" %></h4>
-              <p class="p-link"><%= link_to t("lorem"),"#", class: "link1" %></p>
-              <p><%= @movie.produce_year %></p>
-              <p><%= @movie.broadcasing_time %></p>
+              <h4><%= @movie.name %></h4>
+              <p><%= t "produce_year" %><%= @movie.produce_year.strftime("%Y") %></p>
+              <p><%= t "broadcasing_time" %><%= @movie.broadcasing_time %>
+                <%= t "minute" %>
+              </p>
               <p><%= @movie.description %></p>
-              <p><%= @movie.trailer %></p>
+              <p><%= t "show_case" %><%= @time.show_case %></p>
               <%= link_to t("watch"), "#", class: "watch_but" %>
               <%= link_to t("booking_ticket"), schedule_path(@movie), class: "booking-ticket" %>
             </div>
@@ -27,7 +28,6 @@
           <div class="small_box premier">
             <%= link_to image_tag("pic15.jpg", alt: "", class: "col"), "#" %>
             <div class="clear"></div>
-            <%= link_to t("see_all"), "#", class: "button" %>
           </div>
           <h3><%= t "last_new" %></h3>
           <ul class="latest_news">
@@ -36,7 +36,6 @@
               <%= link_to t("lorem"), "#", class: "button" %>
             </li>
           </ul>
-          <%= link_to t("see_all"), "#", class: "button" %>
         </div>
       </div>
       <div class="clear"></div>

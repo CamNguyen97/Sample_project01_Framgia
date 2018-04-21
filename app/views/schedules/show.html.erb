@@ -11,9 +11,6 @@
                               <div class="product-collateral toggle-content tabs tabs-cgv-movie-type">
                                  <ul class="toggle-tabs">
                                     <li class="last current">
-                                       <span><%= t "view_schedule" %></span>
-                                    </li>
-                                    <li class="last current">
                                        <span><%= link_to t("come_back_home"), root_path %></span>
                                     </li>
                                  </ul>
@@ -31,8 +28,8 @@
                                                 <% @cinemaroom.each do |item| %>
                                                    <ul class="products-grid-movie tab-showtime" >
                                                       <li class="item" >
-                                                         <%= link_to booking_path do %>
-                                                            <span><%= t "room" %><%= item.cinemaroom.id %></span><br>
+                                                         <%= link_to booking_ticket_path(@movie_name) do %>
+                                                            <span><%= t "room" %>: <%= item.id %></span><br>
                                                             <span><%= item.schedule.date_movie.strftime("%d/%m/%Y") %></span><br>
                                                             <span><%= item.schedule.start_time.strftime("%H:%M") %></span><br>
                                                             <span><%= item.cinemaroom.num_of_seats %></span><br>
@@ -60,15 +57,6 @@
                      </div>
                   </div>
                </dd>
-               <dt class="tab">
-                  <div class="day" onclick="getSelectDay(18005100, &#39;20180420&#39;);">
-                     <%= @schedules.schedule.date_movie %>
-                  </div>
-               </dt>
-               <dd class="tab-container">
-                  <div class="tab-content showtimes"></div>
-               </dd>
-            </dl>
          </div>
       </div>
    </div>

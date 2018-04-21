@@ -26,7 +26,7 @@ module SessionsHelper
   end
 
   def check_role?
-    current_user.role == Settings.role
+    (current_user.role == "admin" ? 1 : 0) == Settings.role
   end
 
   def forget user

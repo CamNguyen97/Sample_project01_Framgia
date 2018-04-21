@@ -1,0 +1,33 @@
+<%= link_to t("come_back_home"), root_path %>
+<div id="img_page">
+  <h1><%= t "movies_seat" %></h1>
+  <div class="container">
+    <div class="w3ls-reg">
+      <%= render "booking_tickets/new" %>
+      <div class="displayerBoxes txt-center" >
+        <table class="Displaytable w3ls-table" >
+          <tr>
+            <th>Information</th>
+            <th>So Ve</th>
+            <th>Tong tien</th>
+          </tr>
+          <tr  style="text-align: left;">
+            <td>
+              <p>Phim: <%= @movie.name %></p>
+              <p>--------------------------------------------</p>
+              <p>Phong chieu: <%= @cinemaroom.id %></p>
+              <p>--------------------------------------------</p>
+              <p>Ngay chieu: <%= @date_movie.date_movie %></p>
+            </td>
+            <td>
+             
+            </td>
+            <td>
+              
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 class HomesController < Application2Controller
   before_action :load_movie, only: :show
   def index
-    @movies = Movie.sort_alpha
+    @movies = Movie.sort_alpha.page(params[:page]).per(5)
   end
 
   def show
@@ -9,6 +9,6 @@ class HomesController < Application2Controller
 
   private
   def load_movie
-    @movie = Movie.find_by(id: params[:id])
+    @movie = Movie.find_by id: params[:id]
   end
 end

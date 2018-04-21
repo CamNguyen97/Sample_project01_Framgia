@@ -1,18 +1,19 @@
 Rails.application.routes.draw do
-  root "homes#index"
-
-  get "/about", to: "abouts#index"
-  get "/contact", to: "contacts#index"
-  get "/event", to: "events#index"
-  get "/booking", to: "booking_tickets#index"
-  get "/movies", to: "movies#index"
-  get "/schedules", to: "schedules#index"
-  get "/signup", to: "users#new"
-  post "/signup", to: "users#create"
-  get "/login", to: "sessions#new"
-  post "/login", to: "sessions#create"
-  delete "/logout", to: "sessions#destroy"
-
+  scope "(:locale)", locale: /en|vi/ do
+    root to: "homes#index"
+    get "/about", to: "abouts#index"
+    get "/contact", to: "contacts#index"
+    get "/event", to: "events#index"
+    get "/booking", to: "booking_tickets#new"
+    post "/booking", to: "booking_tickets#create"
+    get "/movies", to: "movies#index"
+    get "/schedules", to: "schedules#index"
+    get "/signup", to: "users#new"
+    post "/signup", to: "users#create"
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
+    delete "/logout", to: "sessions#destroy"
+  end
   get "/admin/studio", to: "page_admin/studios#index"
   get "/admin/studio/new", to: "page_admin/studios#new"
   post "/admin/studio/new", to: "page_admin/studios#create"
@@ -38,9 +39,13 @@ Rails.application.routes.draw do
     resources :seats
     resources :schedules
     resources :homes
-    resources :users
+    resources :user
+    resources :movies
     resources :movietypes
-   end
+    resources :bookings
+    resources :tickets
+  end
+
 
   resources :users
   resources :movies
@@ -48,4 +53,5 @@ Rails.application.routes.draw do
   resources :schedules
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :booking_tickets
 end

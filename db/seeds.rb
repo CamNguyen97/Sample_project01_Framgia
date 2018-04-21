@@ -70,12 +70,12 @@
 #     )
 # end
 
-10.times do |n|
-  SchedulesCinemaroom.create(
-    cinemaroom_id: Faker::Number.between(1, 10),
-    schedule_id: Faker::Number.between(1, 10)
-    )
-end
+# 10.times do |n|
+#   SchedulesCinemaroom.create(
+#     cinemaroom_id: Faker::Number.between(1, 10),
+#     schedule_id: Faker::Number.between(1, 10)
+#     )
+# end
 
 # 10.times do |n|
 #   Schedule.create(

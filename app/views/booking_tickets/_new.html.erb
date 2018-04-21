@@ -1,0 +1,78 @@
+<%= form_for :booking_tickets, url: booking_path do |f| %>
+  <div class="mr_agilemain" >
+    <div class="agileits-left">
+      <%= label_tag t("name") %>
+      <span>*</span>
+      <%= f.text_field :user_id, {class: "Username"}%>
+    </div>
+    <div style="width: 200px;">
+      <%= label_tag t("number_seat") %>
+      <span>*</span>
+      <%= number_field_tag "quantity", 1, class: "Numseats", min: 1 %>
+    </div>
+  </div>
+  <div class="mr_agilemain">
+    <div class="agileits-left">
+      <%= f.text_field :status, {class: "Username"}%>
+    </div>
+  </div>
+  <div class="seatStructure txt-center" >
+    <table id="seatsBlock">
+      <p id="notification"></p>
+      <tr>
+        <td></td>
+        <td><%= Settings.booking_ticket.seat %></td>
+        <td><%= Settings.booking_ticket.seat %></td>
+        <td></td>
+        <td><%= Settings.booking_ticket.seat %></td>
+        <td><%= Settings.booking_ticket.seat %></td>
+      </tr>
+      <tr>
+        <td><%= t "number_s" %></td>
+        <td>
+          <%= check_box "post", "validated", {class: "seats"} %>
+        </td>
+        <td>
+          <%= check_box "post", "validated", {class: "seats"} %>
+        </td>
+        </td>
+        <td class="seatGap"></td>
+        <td>
+          <%= check_box "post", "validated", {class: "seats"} %>
+        </td>
+        <td>
+          <%= check_box "post", "validated", {class: "seats"} %>
+        </td>
+      </tr>
+      <tr class="seatVGap"></tr>
+      <tr>
+        <td><%= t "number_s" %></td>
+        <td>
+          <%= check_box "post", "validated", {class: "seats"} %>
+        </td>
+        <td>
+          <%= check_box "post", "validated", {class: "seats"} %>
+        </td>
+        <td></td>
+        <td>
+          <%= check_box "post", "validated", {class: "seats"} %>
+        </td>
+        <td>
+          <%= check_box "post", "validated", {class: "seats"} %>
+        </td>
+      </tr>
+    </table>
+    <ul class="seat_w3ls">
+      <li class="smallBox greenBox"><%= t "selected_seat" %></li>
+      <li class="smallBox redBox"><%= t "reserved_seat" %></li>
+      <li class="smallBox emptyBox"><%= t "empty_seat" %></li>
+    </ul>
+    <br>
+    <br>
+    <div class="screen">
+      <h2 class="wthree"><%= t "screen" %></h2>
+    </div>
+    <%= button_tag t("confirm_selection") %>
+  </div>
+<% end %>
+    

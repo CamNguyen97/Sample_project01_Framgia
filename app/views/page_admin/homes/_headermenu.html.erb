@@ -16,8 +16,8 @@
       </li>
       <li class="divider"></li>
       <li>
-        <%= link_to "#" do %>
-          <i class="fa fa-sign-out fa-fw"></i> <%= t "logout" %>
+        <%= link_to logout_path, {method: :delete, class: "nav-link"} do %>
+          <i class="fa fa-fw fa-sign-out"></i><%= t "logout" %>
         <% end %>
       </li>
     </ul>

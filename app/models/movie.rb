@@ -13,4 +13,11 @@ class Movie < ApplicationRecord
   scope :sort_alpha, -> do
     where(status: true).order(name: :asc).limit Settings.model.movie.num_movie_show
   end
+  def self.search(search, id)
+  if search
+    where(["name LIKE ?", "%#{search}%"])
+  else
+    scope
+  end
+end
 end
