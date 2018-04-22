@@ -21,14 +21,12 @@
 
   <div class="form-group">
     <%= f.label :descreption %>
-    <%= f.text_area :descreption, cols: 20, rows: 6,class: "form-control" %>
+    <%= f.text_area :description, cols: 20, rows: 6,class: "form-control" %>
   </div>
 
    <div class="form-group">
     <%= f.label :studio_id %>
-    <%= f.select :studio_id, @list,
-      {include_blank: "Choose one",selected: @movies.studio_id},
-      {class: "form-control"} %>
+    <%= f.select :studio_id, @list,{include_blank: "Choose one",selected: @movies.studio_id},{class: "form-control"} %>
   </div>
 
   <%= f.label :status %>

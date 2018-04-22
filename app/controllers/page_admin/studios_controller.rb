@@ -29,6 +29,12 @@ class PageAdmin::StudiosController < PageAdmin::ApplicationController
     end
   end
 
+  def destroy
+    byebug
+    @studios.destroy
+    redirect_to admin_studio_path
+  end
+
   private
 
   def studio_params

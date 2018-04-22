@@ -39,6 +39,7 @@ Rails.application.routes.draw do
     resources :schedules
     resources :homes
     resources :user
+    resources :movies
     resources :movietypes
     resources :bookings
     resources :tickets

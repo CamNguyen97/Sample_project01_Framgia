@@ -25,8 +25,7 @@
             <td>
               <%= button_tag t("update"), data: item.id,
                 class: "btn btn-info btn-add btn-studio-update" %>
-              <%= button_tag t("delete"), data: item.id,
-                class: "btn btn-danger btn-add btn-studio-delete" %>
+                <%=link_to "Delete", page_admin_studios_path, :class => "btn btn-danger btn-add", :remote => true, :method => :delete %>
             </td>
           </tr>
           <% end %>

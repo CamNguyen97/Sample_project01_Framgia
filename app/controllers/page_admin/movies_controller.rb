@@ -6,7 +6,7 @@ class PageAdmin::MoviesController < PageAdmin::ApplicationController
 
   def new
     @movies = Movie.new
-     @list = Studio.all.map{|lst| [lst.name, lst.id]}
+    @list = Studio.all.map{|lst| [lst.name, lst.id]}
   end
 
   def create
@@ -25,7 +25,7 @@ class PageAdmin::MoviesController < PageAdmin::ApplicationController
   def update
 
     if @movies.update_attributes movies_params
-      redirect_to admin_movies_path
+      redirect_to page_admin_movies_path
     else
       render :edit
     end

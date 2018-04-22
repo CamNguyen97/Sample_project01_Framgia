@@ -1,4 +1,3 @@
-$(document).ready(function() {
   $(".btn-stdio").click(function() {
     window.location.href = "/admin/studio/new";
   });
@@ -42,26 +41,8 @@ $(document).ready(function() {
     //console.log(data);
     window.location.href = "/page_admin/movietypes/"+ data + "/edit";
   });
-  //  $(".btn-movie-type-delete").click(function() {
-  //   data = $(this).attr("data")
-  //   //console.log(data);
-  //   $.ajax({
-  //       url: "<%=  %>",
-  //       type: "delete",
-  //       data: data ,
-  //       success: function (response) {
-  //         console.console.log(response);
-  //         window.location.href = "/page_admin/movietypes";
-  //       },
-  //       error: function(jqXHR, textStatus, errorThrown) {
-  //          console.log(textStatus, errorThrown);
-  //       }
-  //   });
-  // });
   $(".btn-ticket-update").click(function() {
     data = $(this).attr("data")
     //console.log(data);
     window.location.href = "/page_admin/tickets/" + data + "/edit";
->>>>>>> 76b13a03bd5b297a09b8faf0a3618e141578a136
   });
-});

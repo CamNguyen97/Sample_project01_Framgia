@@ -1,7 +1,8 @@
 en:
   schedule: "Schedules"
-  save_chane: "Save chane"
   save_chane: "Save changes"
+  tickets: "Tickets"
+  bookings: "Booking tickets"
   add: "Add"
   update: "Update"
   delete: "Delete"
